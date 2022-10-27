@@ -87,12 +87,15 @@ for belge in tarama:
             listData_df.to_excel(writer, sheet_name="new_sheet2")
     
     
-    except OSError:
+    except OSError as e:
         print("""#####\tOS Error Found\t#####""")
+        print(e)
         continue
-    except ValueError:
+    except ValueError as e:
         print("""#####\tValue Error Found\t#####""")
+        print(e)
         continue
-    except AttributeError:
+    except AttributeError as e:
         print("""#####\tAttribute Error Found\t#####""")
+        print(e)
         continue
